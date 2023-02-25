@@ -1,6 +1,6 @@
 {
   "name": "@11tyrocks/eleventy-plugin-sass-lightningcss",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Compile Sass in Eleventy (11ty) and process it with LightningCSS to minify, prefix, and add future CSS support.",
   "homepage": "",
   "main": ".eleventy.js",
@@ -30,11 +30,11 @@
     "url": "https://github.com/5t3ph/eleventy-plugin-sass-lightningcss/issues"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0-beta.3"
+    "@11ty/eleventy": "^2.0.0"
   },
   "dependencies": {
     "browserslist": "^4.21.5",
-    "lightningcss": "^1.18.0",
-    "sass": "^1.58.0"
+    "lightningcss": "^1.19.0",
+    "sass": "^1.58.3"
   }
 }
