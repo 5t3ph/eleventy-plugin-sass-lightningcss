@@ -23,8 +23,6 @@ Gummi bears chocolate bar gummi bears gummies. Soufflé soufflé dessert wafer c
 
 Gummi bears candy cotton candy oat cake candy canes bonbon cake. Gummi bears jelly marzipan. Dessert topping biscuit jujubes jelly beans caramels cookie. Gingerbread candy gummi bears I love topping cookie halvah carrot cake topping. Sugar plum tart liquorice liquorice candy pudding powder. I love I love halvah chocolate cake I love cake apple pie wafer.
 
-![test image](http://placecorgi.com/800/200)
-
 I love lollipop chocolate cake marshmallow sesame snaps. Tart gingerbread fruitcake icing sesame snaps danish sesame snaps soufflé jujubes. Halvah I love I love lemon drops. Donut I love candy canes I love dragée sugar plum. I love tootsie roll I love cake. Cupcake danish danish macaroon lemon drops liquorice chocolate tart.
 
 Sugar plum jelly sesame snaps I love powder. Chocolate sesame snaps cake. Pastry brownie donut I love liquorice tootsie roll. Gummi bears sesame snaps I love cookie tootsie roll. I love lemon drops topping toffee cake I love chocolate bar. Biscuit candy sweet candy canes danish danish cake. Marzipan tiramisu sweet roll fruitcake. Jujubes I love candy canes.
