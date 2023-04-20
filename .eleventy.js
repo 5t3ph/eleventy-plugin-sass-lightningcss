@@ -40,7 +40,17 @@ try {
   // no package browserslist
 }
 
-module.exports = (eleventyConfig) => {
+module.exports = (eleventyConfig, options) => {
+  const defaults = {
+    minify: true,
+    sourceMap: true,
+  };
+
+  const { minify, sourceMap } = {
+    ...defaults,
+    ...options,
+  };
+
   // Recognize Sass as a "template languages"
   eleventyConfig.addTemplateFormats("scss");
 
@@ -57,19 +67,39 @@ module.exports = (eleventyConfig) => {
 
       let result = sass.compileString(inputContent, {
         loadPaths: [parsed.dir || "."],
-        sourceMap: false,
+        sourceMap,
       });
 
       this.addDependencies(inputPath, result.loadedUrls);
 
       return async () => {
-        let { code } = await transform({
+        let { code, map } = await transform({
           code: Buffer.from(result.css),
-          minify: true,
-          sourceMap: false,
+          minify,
           targets,
+          sourceMap,
+          inputSourceMap: JSON.stringify(result.sourceMap),
         });
-        return code;
+
+        let mapComment = "";
+
+        if (sourceMap) {
+          const fileLocation = path.resolve(
+            __dirname,
+            fs.realpathSync(inputPath)
+          );
+
+          const sourceMapName = `${parsed.name}.css.map`;
+          const sourceMapFile = `${path.dirname(
+            fileLocation
+          )}/${sourceMapName}`;
+
+          fs.writeFileSync(sourceMapFile, map);
+
+          mapComment = `/*# sourceMappingURL=${sourceMapName} */ `;
+        }
+
+        return code + "\n" + mapComment;
       };
     },
   });

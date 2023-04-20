@@ -1,5 +1,11 @@
+@use "reset";
+
 $color: rebeccapurple;
 
 body {
   color: $color;
+}
+
+p {
+  line-height: 1.5;
 }

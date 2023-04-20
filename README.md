@@ -45,6 +45,23 @@ Then, write your Sass using any organization pattern you like as long as it live
 > **Note**
 > If you are already using PostCSS or Parcel, you will be doubling efforts with this plugin and should not add it.
 
+## Config Options
+
+| Option    | Type    | Default |
+| --------- | ------- | ------- |
+| minify    | boolean | true    |
+| sourceMap | boolean | false   |
+
+### Source maps
+
+If you enable source maps, you'll also need to pass them through to your public build.
+
+Add the following to your Eleventy config.
+
+```js
+eleventyConfig.addPassthroughCopy("**/*.map");
+```
+
 ## How does it work?
 
 This plugin uses Eleventy's `addTemplateFormats` and `addExtension` features to essentiallly recognize Sass as a first-class templating language, and add custom processing. Since it makes Sass into a templating language, changes are applied during local development hot-reloading without a delay or requiring a manual browser refresh.
