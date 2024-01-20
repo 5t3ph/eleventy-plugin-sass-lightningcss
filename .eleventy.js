@@ -44,15 +44,14 @@ module.exports = (eleventyConfig) => {
   // Recognize Sass as a "template languages"
   eleventyConfig.addTemplateFormats("scss");
 
+  // Ignore scss files starting with underscore
+  eleventyConfig.ignores.add("**/_*.scss");
+
   // Compile Sass and process with LightningCSS
   eleventyConfig.addExtension("scss", {
     outputFileExtension: "css",
     compile: async function (inputContent, inputPath) {
       let parsed = path.parse(inputPath);
-      if (parsed.name.startsWith("_")) {
-        return;
-      }
-
       let targets = browserslistToTargets(browserslist(browserslistTargets));
 
       let result = sass.compileString(inputContent, {
